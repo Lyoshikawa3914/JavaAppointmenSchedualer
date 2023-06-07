@@ -1,4 +1,5 @@
 WGU Software II C195
+Languages: Java, MySQL
 
 The purpose of this project was to create an app that accumulated all the Java information from this course.
 This application uses a simple user interface that schedules appointments for customers using MySQL to add, update,
