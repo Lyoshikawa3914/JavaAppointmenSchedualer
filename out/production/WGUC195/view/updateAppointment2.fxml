@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane prefHeight="497.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateAppointmentsController">
+    <children>
+        <Label alignment="CENTER" contentDisplay="TOP" layoutX="248.0" layoutY="33.0" prefHeight="17.0" prefWidth="105.0" text="Appointments" />
+        <GridPane layoutY="72.0" prefHeight="413.0" prefWidth="600.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="37.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="TOP_LEFT" text="AppointmentID" GridPane.halignment="CENTER" />
+                <Label text="Title" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Description" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Location" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+                <Label text="Contact" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                <Label text="Type" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+                <Label text="Start Date" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                <Label text="End Date" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                <Label text="CustomerID" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                <Label text="UserID" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                <TextField fx:id="appointmentCol" GridPane.columnIndex="1">
+                    <GridPane.margin>
+                        <Insets left="75.0" right="75.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="descriptionCol" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <GridPane.margin>
+                        <Insets left="75.0" right="75.0" />
+                    </GridPane.margin>
+                </TextField>
+                <TextField fx:id="locationCol" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                    <GridPane.margin>
+                        <Insets left="75.0" right="75.0" />
+                    </GridPane.margin>
+                </TextField>
+                <Button fx:id="updateButton" mnemonicParsing="false" onAction="#updateAppointment" text="Update" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="13">
+                    <GridPane.margin>
+                        <Insets />
+                    </GridPane.margin>
+                </Button>
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" text="Back" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="13">
+                    <GridPane.margin>
+                        <Insets right="20.0" />
+                    </GridPane.margin>
+                </Button>
+                <ComboBox fx:id="customerCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10" />
+                <ComboBox fx:id="userCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="11" />
+                <ComboBox fx:id="contactCombo" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+                <TextField fx:id="titleCol" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="75.0" right="75.0" />
+                    </GridPane.margin>
+                </TextField>
+                <DatePicker fx:id="startDatePick" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" />
+                <DatePicker fx:id="endDatePick" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="8" />
+                <Label text="Start Time" GridPane.halignment="CENTER" GridPane.rowIndex="7" />
+                <Label text="End Time" GridPane.halignment="CENTER" GridPane.rowIndex="9" />
+            <ComboBox fx:id="typeComboBox" prefWidth="150.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+            <ComboBox fx:id="startHCombo" onAction="#startHComboAction" prefHeight="25.0" prefWidth="68.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="60.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="endHCombo" onAction="#endHComboAction" prefHeight="25.0" prefWidth="69.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="60.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </Label>
+            <Label text=":" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="150.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="startMCombo" onAction="#startMComboAction" prefHeight="25.0" prefWidth="67.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
+               <GridPane.margin>
+                  <Insets left="160.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ComboBox fx:id="endMCombo" onAction="#endMComboAction" prefHeight="25.0" prefWidth="70.0" GridPane.columnIndex="1" GridPane.rowIndex="9">
+               <GridPane.margin>
+                  <Insets left="160.0" />
+               </GridPane.margin>
+            </ComboBox>
+            </children>
+        </GridPane>
+    </children>
+</AnchorPane>

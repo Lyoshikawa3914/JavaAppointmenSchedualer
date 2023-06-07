@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="459.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CustomersController">
+   <children>
+      <HBox alignment="CENTER" layoutY="-1.0" maxWidth="-Infinity" prefHeight="72.0" prefWidth="600.0">
+         <children>
+            <Label alignment="CENTER" text="Customers" />
+         </children>
+      </HBox>
+      <TableView fx:id="customerTable" layoutY="71.0" prefHeight="250.0" prefWidth="607.0">
+        <columns>
+          <TableColumn fx:id="customerID" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="customerName" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="addressCustomers" prefWidth="75.0" text="Address" />
+            <TableColumn fx:id="postalCodeCustomers" prefWidth="75.0" text="Postal Code" />
+            <TableColumn fx:id="phoneNumCustomers" prefWidth="75.0" text="Phone Number" />
+            <TableColumn fx:id="countryCol" prefWidth="75.0" text="Country" />
+            <TableColumn fx:id="divisionCol" prefWidth="75.0" text="Division ID" />
+        </columns>
+      </TableView>
+      <HBox alignment="BOTTOM_RIGHT" layoutY="336.0" prefHeight="85.0" prefWidth="607.0" spacing="30.0">
+         <children>
+            <Button fx:id="toAppointmentButton" mnemonicParsing="false" onAction="#toAppointment" text="To Appointments">
+               <HBox.margin>
+                  <Insets right="150.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="addButtonCustomers1" alignment="BOTTOM_CENTER" layoutX="390.0" layoutY="45.0" mnemonicParsing="false" onAction="#switchToAddCustomer" prefWidth="70.0" text="Add" />
+            <Button fx:id="enterButtonCustomers" alignment="BOTTOM_CENTER" mnemonicParsing="false" onAction="#updateRow" prefWidth="70.0" text="Update" />
+            <Button fx:id="deleteButtonCustomers" mnemonicParsing="false" onAction="#deleteRow" prefWidth="70.0" text="Delete">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin></Button>
+         </children>
+         <padding>
+            <Insets bottom="40.0" right="20.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="-271.0" layoutY="471.0" prefHeight="100.0" prefWidth="200.0" />
+      <Button fx:id="reportsButton" layoutX="24.0" layoutY="433.0" mnemonicParsing="false" onAction="#toReports" prefHeight="25.0" prefWidth="99.0" text="To Reports" />
+   </children>
+</AnchorPane>

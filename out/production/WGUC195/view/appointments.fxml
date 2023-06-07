@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AppointmentsController">
+   <children>
+      <HBox alignment="CENTER_RIGHT" layoutX="-2.0" layoutY="426.0" prefHeight="57.0" prefWidth="673.0" spacing="50.0">
+         <children>
+            <Button fx:id="toCustomersButton" maxHeight="-Infinity" mnemonicParsing="false" onAction="#backToCustomers" prefHeight="30.0" prefWidth="145.0" text="To Customers">
+               <HBox.margin>
+                  <Insets left="10.0" right="180.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="addButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#addAppointments" prefHeight="30.0" prefWidth="80.0" text="Add" />
+            <Button fx:id="updateButton" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" onAction="#updateAppointments" prefHeight="30.0" prefWidth="80.0" text="Update" />
+            <Button fx:id="deleteButton" alignment="CENTER" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="30.0" prefWidth="80.0" text="Delete">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+      </HBox>
+      <Label alignment="CENTER" layoutX="200.0" layoutY="14.0" prefHeight="30.0" prefWidth="201.0" text="Appointments" />
+      <TabPane layoutX="1.0" layoutY="67.0" prefHeight="278.0" prefWidth="831.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab fx:id="all" text="Appointments">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="304.0" prefWidth="437.0">
+                     <children>
+                        <TableView fx:id="allTable" prefHeight="251.0" prefWidth="831.0">
+                           <columns>
+                              <TableColumn fx:id="allAppointmentCol" prefWidth="94.0" text="AppointmentID" />
+                              <TableColumn fx:id="allTitleCol" prefWidth="56.0" text="Title" />
+                              <TableColumn fx:id="allCustomerCol" prefWidth="75.0" text="CustomerID" />
+                              <TableColumn fx:id="allTypeCol" prefWidth="56.0" text="Type" />
+                              <TableColumn fx:id="allLocationCol" prefWidth="94.0" text="Location" />
+                              <TableColumn fx:id="allDescriptionCol" prefWidth="75.0" text="Description" />
+                              <TableColumn fx:id="allStartCol" prefWidth="113.0" text="Start" />
+                              <TableColumn fx:id="allEndCol" minWidth="0.0" prefWidth="112.0" text="End" />
+                              <TableColumn fx:id="allContactCol" prefWidth="79.0" text="contact" />
+                              <TableColumn fx:id="allUserCol" prefWidth="76.0" text="UserID" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="allButton" layoutX="375.0" layoutY="395.0" mnemonicParsing="false" onAction="#showAll" text="All" />
+      <Button fx:id="weekButton" layoutX="488.0" layoutY="395.0" mnemonicParsing="false" onAction="#showWeek" text="Week" />
+      <Button fx:id="monthButton" layoutX="606.0" layoutY="395.0" mnemonicParsing="false" onAction="#showMonth" text="Month" />
+      <Button fx:id="reportButton" layoutX="8.0" layoutY="393.0" mnemonicParsing="false" onAction="#toReports" prefHeight="30.0" prefWidth="129.0" text="To Reports" />
+   </children>
+</AnchorPane>

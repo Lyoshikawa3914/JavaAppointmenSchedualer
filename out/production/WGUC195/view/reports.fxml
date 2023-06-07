@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="577.0" prefWidth="1106.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ReportsController">
+   <children>
+      <HBox layoutX="4.0" layoutY="500.0" prefHeight="77.0" prefWidth="594.0">
+         <children>
+            <Button fx:id="customersButton" mnemonicParsing="false" onAction="#toCustomers" prefHeight="32.0" prefWidth="104.0" text="To Customers" />
+         </children>
+      </HBox>
+      <HBox layoutX="1.0" layoutY="429.0" prefHeight="71.0" prefWidth="600.0">
+         <children>
+            <Button fx:id="appointmentButton" mnemonicParsing="false" onAction="#toAppointment" prefHeight="35.0" prefWidth="108.0" text="To Appointments" />
+         </children>
+      </HBox>
+      <TabPane layoutX="1.0" layoutY="64.0" prefHeight="334.0" prefWidth="1106.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="customerReportsTab" text="Customer Reports">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="305.0" prefWidth="1005.0">
+                     <children>
+                        <Label fx:id="customerReportLabel" layoutX="46.0" layoutY="178.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="monthCombo" layoutX="29.0" layoutY="43.0" prefWidth="150.0" />
+                        <ComboBox fx:id="appointmentType" layoutX="29.0" layoutY="79.0" prefWidth="150.0" />
+                        <Button fx:id="enterButton" layoutX="37.0" layoutY="116.0" mnemonicParsing="false" onAction="#enterAction" text="Enter" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="contactSchedualeTab" text="Contact Scheduale">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="contactSchedualeLabel" layoutX="36.0" layoutY="80.0" text="Contact Schedules">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ComboBox fx:id="contactCombo" layoutX="28.0" layoutY="22.0" onAction="#contactComboAction" prefWidth="150.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="demographics" text="Demographics">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="demographicsLabel" layoutX="44.0" layoutY="40.0" text="Label">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+      <Label layoutX="278.0" layoutY="25.0" text="Reports">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
